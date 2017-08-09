@@ -6,7 +6,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { RightDataComponent } from './right-data/right-data.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +16,8 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

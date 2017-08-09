@@ -7,22 +7,30 @@ export class DataService {
 Ganesh: any;
   constructor() {
 this.Ganesh = [
-{ID: 1, Src: 'abcd', Name : 'mayuresh', Status: 'i am Cool' },
-{ID: 1, Src: 'abcd', Name : 'Sonali', Status: 'so beautifull' },
-{ID: 1, Src: 'abcd', Name : 'Raj', Status: 'Good Morning' },
-{ID: 1, Src: 'abcd', Name : 'Omakar', Status: 'Hello World' },
-{ID: 1, Src: 'abcd', Name : 'Sharayu', Status: 'Hii Friends' },
-{ID: 1, Src: 'abcd', Name : 'Smita', Status: 'hii Everyone' },
-{ID: 1, Src: 'abcd', Name : 'Rushi', Status: 'Something is hpn' },
-{ID: 1, Src: 'abcd', Name : 'Vaibhav', Status: 'Friends forever' },
-{ID: 1, Src: 'abcd', Name : 'Madhuri', Status: 'Lay Bhari' },
-{ID: 1, Src: 'abcd', Name : 'Manthan', Status: 'Ky Suchat Nahi' },
-{ID: 1, Src: 'abcd', Name : 'Tanavi', Status: 'Sampal baba Ekdach' },
+{ID: 1, Src: 'abcd', Name : 'mayuresh', Status: 'Status1', value: 0 },
+{ID: 1, Src: 'abcd', Name : 'Sonali', Status: 'Status2', value: 0},
+{ID: 1, Src: 'abcd', Name : 'Raj', Status: 'Status3' , value: 1},
+{ID: 1, Src: 'abcd', Name : 'Omakar', Status: 'Status4', value: 0 },
+{ID: 1, Src: 'abcd', Name : 'Sharayu', Status: 'Status5', value: 1 },
+{ID: 1, Src: 'abcd', Name : 'Smita', Status: 'Status6', value: 1 },
+{ID: 1, Src: 'abcd', Name : 'Rushi', Status: 'Status7', value: 0 },
+{ID: 1, Src: 'abcd', Name : 'Vaibhav', Status: 'Status8' , value: 1},
+{ID: 1, Src: 'abcd', Name : 'Madhuri', Status: 'status9', value: 0 },
+{ID: 1, Src: 'abcd', Name : 'Manthan', Status: 'Status10', value: 1 },
+{ID: 1, Src: 'abcd', Name : 'Tanavi', Status: 'Status11', value: 0 },
 ];
 
   }
-
+/*
   getdata() {
     return this.Ganesh;
-  }
+  }*/
+
+  filterItems(searchTerm) {
+
+        return this.Ganesh.filter((item) => {
+            return item.Name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+        });
+
+    }
 }

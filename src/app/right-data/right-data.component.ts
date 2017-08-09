@@ -7,13 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./right-data.component.css']
 })
 export class RightDataComponent implements OnInit {
-GnapatiData: any;
+searchTerm: String = '';
+  GnapatiData: any;
+
   constructor(public Data1: DataService) { }
 
   ngOnInit() {
 
-    this.GnapatiData = this.Data1.getdata();
+    // this.GnapatiData = this.Data1.getdata();
     console.log(this.GnapatiData);
+     this.setFilteredItems();
   }
+    setFilteredItems() {
+
+        this.GnapatiData = this.Data1.filterItems(this.searchTerm);
+
+    }
 
 }
